@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventy - Domov</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center; /* Zarovnáva text na stred v celom tele stránky */
+    }
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: rgb(33, 72, 110);  /* ← PRIDAJ TÚTO RIADKU NA ZMENU VŠEOBECNEJ FARBY TEXTU */
+}
+    main {
+      margin-top: 10px; /* Posunie celý obsah nižšie */
+      text-align: center; /* Zarovná text na stred v hlavnej časti */
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #21486e;
+      padding: 70px 20px;
+      position: relative;
+    }
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .logo img {
+      height: 150px;
+      margin-top: 10px; /* Posunie obrázok o 20px nižšie */
+    }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 20px; /* Presúva menu doľava */
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .nav-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-menu ul li {
+      padding: 10px 20px;
+    }
+    .nav-menu ul li a {
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+    
+    .nav-menu.active {
+      display: flex;
+    }
+    .cart-icon {
+      position: absolute;
+      top: 65px;
+      right: 20px;
+      cursor: pointer;
+    }
+    .cart-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+    .footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+  background-color: #f8f8f8;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="learnia.jpg" alt="Logo">
+      </a>
+    </div>
+    <a href="cart.html" class="cart-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2 13h13l2-7H6"></path>
+      </svg>
+    </a>
+  </header>
+  
+  
+  <!-- Navigačné menu -->
+  <nav id="navMenu" class="nav-menu">
+    <ul>
+      <li><a href="index.html">Domov</a></li>
+      <li><a href="onas.html">O Nás</a></li>
+      <li><a href="tickets.html">Kurzy</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h1>FAQ - Často kladené otázky</h1>
+    <section class="faq-item">
+      <h2>Pre koho sú vaše kurzy určené?</h2>
+      <p>Naše kurzy sú vhodné pre začiatočníkov, pokročilých aj profesionálov. Vyberie si každý, kto má chuť učiť sa a rásť.</p>
+    </section>
+    <section class="faq-item">
+      <h2>Ako prebiehajú kurzy?</h2>
+      <p>Kurzy prebiehajú online alebo prezenčne – podľa typu. Sú interaktívne, vedené skúsenými lektormi a zamerané na prax.      </p>
+    </section>
+    <section class="faq-item">
+      <h2>Dostanem po absolvovaní kurzu certifikát?</h2>
+      <p>Áno, po úspešnom absolvovaní kurzu dostanete certifikát o ukončení.</p>
+    </section>
+    <section class="faq-item">
+      <h2>Potrebujem nejaké predchádzajúce znalosti?</h2>
+      <p>Nie všetky kurzy vyžadujú predchádzajúce skúsenosti. Pri každom kurze uvádzame odporúčanú vstupnú úroveň.</p>
+    </section>
+    <section class="faq-item">
+      <h2>Ako sa môžem na kurz prihlásiť?</h2>
+      <p>Jednoducho – vyberte si kurz na našej stránke a kliknite na tlačidlo „Objednať“. Následne Vás náš tím bude kontaktovať.</p>
+    </section>
+    <section class="faq-item">
+      <h2>Je možné kurz vrátiť, ak mi nebude vyhovovať?</h2>
+      <p>Áno, ponúkame možnosť vrátenia peňazí do 7 dní od začiatku kurzu, ak nebudete spokojní.</p>
+    </section>
+    <section class="faq-item">
+      <h2>Môžem si kurz pozrieť zo záznamu?</h2>
+      <p>Áno, všetky online kurzy sú nahrávané a máte k nim prístup aj po skončení lekcií.</p>
+    </section>
+    <section class="faq-item">
+      <h2>Ponúkate aj firemné školenia?</h2>
+      <p>Áno, vieme pripraviť školenia na mieru pre firmy. Stačí nás kontaktovať a dohodneme si podrobnosti.</p>
+    </section>
+    <section class="faq-item"></section>
+    <h2>Aké technické vybavenie potrebujem na online kurz?</h2>
+<p>Stačí počítač alebo tablet s prístupom na internet. Odporúčame tiež slúchadlá a pokojné prostredie na učenie.</p>
+</section>
+<section class="faq-item"></section>
+<h2>Koľko času mi kurz zaberie?</h2>
+<p>Dĺžka kurzu závisí od jeho typu. Každý kurz má pri sebe uvedený odhadovaný čas, ktorý budete potrebovať na jeho absolvovanie.</p>
+</section>
+<section class="faq-item"></section>
+<h2>Je možné získať zľavu na viac kurzov?</h2>
+<p>Áno, pri zakúpení viacerých kurzov naraz alebo pre skupiny ponúkame výhodné zľavy. Kontaktujte nás pre viac informácií.</p>
+</section>
+<section class="faq-item"></section>
+<h2>Môžem sa pýtať lektora otázky počas kurzu?</h2>
+<p>Určite. Kurzy sú interaktívne a podporujeme aktívnu komunikáciu medzi účastníkmi a lektorom.</p>
+</section>
+<section class="faq-item"></section>
+<h2>Budete ponúkať aj nové kurzy?</h2>
+<p>Áno, neustále pracujeme na nových kurzoch a aktualizujeme našu ponuku podľa dopytu a trendov.</p>
+</section>
+<section class="faq-item"></section>
+<h2>Je kurz dostupný aj mimo Slovenska?</h2>
+<p>Áno, všetky naše online kurzy sú dostupné kdekoľvek, kde je pripojenie na internet.</p>
+</section>
+  </main>
+  <footer class="footer">
+    <p>© 2025 Learnia. Všetky práva vyhradené.</p>
+  </footer>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

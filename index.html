@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventy - Domov</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center; /* Zarovnáva text na stred v celom tele stránky */
+    }
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: rgb(33, 72, 110);  /* ← PRIDAJ TÚTO RIADKU NA ZMENU VŠEOBECNEJ FARBY TEXTU */
+}
+    main {
+      margin-top: 10px; /* Posunie celý obsah nižšie */
+      text-align: center; /* Zarovná text na stred v hlavnej časti */
+    }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #21486e;
+  padding: 70px 20px;
+  position: relative;
+
+    }
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .logo img {
+      height: 150px;
+      margin-top: 10px; /* Posunie obrázok o 20px nižšie */
+    }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 20px; /* Presúva menu doľava */
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .nav-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-menu ul li {
+      padding: 10px 20px;
+    }
+    .nav-menu ul li a {
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+    
+    .nav-menu.active {
+      display: flex;
+    }
+    .cart-icon {
+      position: absolute;
+      top: 65px;
+      right: 20px;
+      cursor: pointer;
+    }
+    .cart-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+    .footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+  background-color: #f8f8f8;
+}
+    :root {
+      --primary-color: rgb(33, 72, 110);
+      --accent-color: #f05f40;
+      --bg-light: #f9f9f9;
+      --text-dark: #333;
+      --text-light: #fff;
+      --transition: 0.3s;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      color: rgb(33, 72, 110);
+      line-height: 1.6;
+    }
+    
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .logo img {
+      height: 150px;
+      margin-top: 10px;
+    }
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+    nav a:hover {
+      color: var(--accent-color);
+    }
+    /* Hero */
+    .hero {
+      position: relative;
+      background: url('hero.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(33, 72, 110);
+    
+    }
+    .hero h1 {
+  color: rgb(33, 72, 110);
+}
+
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn-primary {
+      background: var(--accent-color);
+      color: var(--text-light);
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-primary:hover {
+      background: #d14a2c;
+      transform: translateY(-2px);
+    }
+    main { padding: 2rem; }
+    /* Courses Grid */
+    .courses {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-bottom: 3rem;
+    }
+    .course-card {
+      background: var(--bg-light);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition);
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+    .course-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+      flex: 1;
+    }
+    .card-content h3 {
+      margin: 0 0 0.5rem;
+    }
+    .card-content p {
+      flex: 1;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    .card-content button {
+      width: 100%;
+    }
+    /* Newsletter */
+    .newsletter {
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 2rem;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 3rem;
+    }
+    .newsletter input[type="email"] {
+      padding: 0.75rem;
+      width: 60%;
+      max-width: 300px;
+      border: none;
+      border-radius: 50px 0 0 50px;
+      outline: none;
+    }
+    .newsletter button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0 50px 50px 0;
+      cursor: pointer;
+      background: var(--accent-color);
+      color: var(--text-light);
+      transition: background var(--transition);
+    }
+    .card-content p {
+  flex: 1;
+  margin-bottom: 1rem;
+  color: rgb(33, 72, 110);
+}
+
+    .newsletter button:hover {
+      background: #d14a2c;
+    }
+    /* Footer */
+    footer {
+      background: var(--bg-light);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #ddd;
+    }
+    @media(max-width: 768px) {
+      header { flex-direction: column; gap: 1rem; }
+      nav { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="learnia.jpg" alt="Logo">
+      </a>
+    </div>
+    <a href="cart.html" class="cart-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2 13h13l2-7H6"></path>
+      </svg>
+    </a>
+  </header>
+  
+  
+  <!-- Navigačné menu -->
+  <nav id="navMenu" class="nav-menu">
+    <ul>
+      <li><a href="index.html">Domov</a></li>
+      <li><a href="onas.html">O Nás</a></li>
+      <li><a href="tickets.html">Kurzy</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Otvorte si dvere k novým znalostiam</h1>
+<p>Objavte s Learnia intenzívne a zaujímavé kurzy, ktoré vás posunú vpred. Vyberte si ten pravý pre seba.</p>
+
+
+      <!-- Namiesto button používame anchor pre spoľahlivé presmerovanie -->
+      <a href="tickets.html" class="btn-primary" role="button">Pozrieť kurzy</a>
+    </div>
+  </section>
+
+  <main>
+    <h2 style="text-align:center; margin-bottom:2rem;">Kurzy odporúčané zákazníkmi</h2>
+    <div id="courses" class="courses">
+      <!-- Jazykové kurzy -->
+      <div class="course-card">
+        <img src="german.jpg" alt="Nemecký jazyk">
+        <div class="card-content">
+          <h3>Nemecký jazyk - Základný</h3>
+          <p>Intenzívny 4-týždňový kurz nemčiny pre začiatočníkov.</p>
+          <button class="btn-primary" onclick="addToCart('Kurz: Nemecký jazyk - Základný', 120)">Objednať (120 €)</button>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="english.jpg" alt="Anglický jazyk">
+        <div class="card-content">
+          <h3>Anglický jazyk - Pokročilý</h3>
+          <p>Rozšírený 6-týždňový kurz angličtiny pre pokročilých.</p>
+          <button class="btn-primary" onclick="addToCart('Kurz: Anglický jazyk - Pokročilý', 150)">Objednať (150 €)</button>
+        </div>
+      </div>
+      <!-- Programovanie -->
+      <div class="course-card">
+        <img src="javascript.jpg" alt="Programovanie v JavaScripte">
+        <div class="card-content">
+          <h3>Programovanie v JavaScripte</h3>
+          <p>8-týždňový kurz programovania webových aplikácií.</p>
+          <button class="btn-primary" onclick="addToCart('Kurz: Programovanie v JavaScripte', 200)">Objednať (200 €)</button>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="python.jpg" alt="Python pre dátovú analýzu">
+        <div class="card-content">
+          <h3>Python pre dátovú analýzu</h3>
+          <p>6-týždňový kurz Pythonu zameraný na prácu s dátami.</p>
+          <button class="btn-primary" onclick="addToCart('Kurz: Python pre dátovú analýzu', 180)">Objednať (180 €)</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="newsletter">
+      <h3>Zostaňte v obraze</h3>
+      <p>Prihláste sa na odber noviniek a získajte exkluzívne zľavy.</p>
+      <form onsubmit="subscribeNewsletter(event)">
+        <input type="email" placeholder="Váš email" required />
+        <button type="submit">Prihlásiť sa </	button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Learnia. Všetky práva vyhradené.</p>
+  </footer>
+
+  <script>
+    function addToCart(courseName, price) {
+      const item = { name: courseName, price, quantity: 1 };
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(item);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      window.location.href = 'cart.html';
+    }
+    function subscribeNewsletter(e) {
+      e.preventDefault();
+      alert('Ďakujeme za prihlásenie k odberu!');
+      e.target.reset();
+    }
+  </script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

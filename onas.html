@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O nás – Learnia</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: rgb(33, 72, 110);
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #21486e;
+      padding: 70px 20px;
+      position: relative;
+    }
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .logo img {
+      height: 150px;
+      margin-top: 10px;
+    }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    .nav-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-menu ul li {
+      padding: 10px 20px;
+    }
+    .nav-menu ul li a {
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+    .nav-menu.active {
+      display: flex;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 20px;
+    }
+    h1, h2, h3 {
+      color: rgb(33, 72, 110);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-top: 2rem;
+    }
+    ul {
+      margin: 1rem 0 2rem 1.2rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    .about-us p {
+      margin-bottom: 1rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #f05f40;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn-primary:hover {
+      background: #d14a2c;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+      background-color: #f8f8f8;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="learnia.jpg" alt="Logo Learnia">
+      </a>
+    </div>
+    <nav id="navMenu" class="nav-menu">
+        <ul>
+          <li><a href="index.html">Domov</a></li>
+          <li><a href="onas.html">O Nás</a></li>
+          <li><a href="tickets.html">Kurzy</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <section class="about-us">
+      <h1>Kto sme?</h1>
+      <p><strong>Learnia</strong> je dynamická vzdelávacia platforma založená v roku 2025, ktorá ponúka široké spektrum online aj prezenčných kurzov z oblasti jazykov, IT, designu, osobného rozvoja a odborných zručností.</p>
+
+      <h2>Naša misia</h2>
+      <p>Veríme, že učenie je kľúčom k osobnému a profesionálnemu rastu. Našou misiou je sprístupniť kvalitné vzdelávanie všetkým, ktorí chcú získať nové schopnosti a uplatniť sa na trhu práce.</p>
+
+      <h2>Čo u nás nájdete</h2>
+      <ul>
+        <li> <strong>Jazykové kurzy</strong> – od začiatočníkov po pokročilých</li>
+        <li> <strong>IT a programovanie</strong> – web, data science, kyberbezpečnosť</li>
+        <li> <strong>Osobný rozvoj</strong> – time management, verejné vystupovanie</li>
+        <li> <strong>Odborné certifikáty</strong> – SAP, Cisco, PMI a ďalšie</li>
+        <li> <strong>Hybridné a firemné školenia</strong> – na mieru pre tímy a firmy</li>
+      </ul>
+    </ul>
+
+      <h2>Naše hodnoty</h2>
+      <p>Inovácie, transparentnosť a individuálny prístup sú základom každého nášho programu. Preto pravidelne aktualizujeme obsah a zapájame lektorov s bohatou praxou.</p>
+      <li> Inovácie</li>
+      <li> Transparentnosť</li>
+      <li> Individuálny prístup</li>
+      <p>sú základom každého nášho programu. Preto pravidelne aktualizujeme obsah a zapájame lektorov s bohatou praxou.</p>
+
+      <ul>
+        <ul>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Learnia. Všetky práva vyhradené.</p>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
